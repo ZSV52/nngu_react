@@ -1,4 +1,5 @@
 import React from 'react';
+import Footer from '../Footer';
 import Header from '../Header';
 import ItemsList from '../ItemsList';
 import style from './MainPage.module.scss';
@@ -17,7 +18,8 @@ const MainPage = () => {
   return (
     <>
       <Header />
-      <ItemsList />;
+      <ItemsList />
+      <Footer />;
     </>
   );
 };
