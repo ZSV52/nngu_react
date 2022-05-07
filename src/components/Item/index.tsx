@@ -1,12 +1,18 @@
-import React from 'react';
+import React, { FC } from 'react';
 import style from './Item.module.scss';
 
-const Item = () => {
+interface IItem {
+  name: string;
+  description: string;
+}
+const Item: FC<IItem> = (props) => {
+  const { name, description } = props;
+
   return (
     <div className={style.item_container}>
-      <p>Ботинки</p>
+      <p>{name}</p>
       <p>Описание:</p>
-      <p>Смотрите, какие потрясающие ботинки</p>
+      <p>{description}</p>
     </div>
   );
 };
