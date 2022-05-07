@@ -1,10 +1,14 @@
 import React from 'react';
+import Item from '../Item';
+import style from './ItemsList.module.scss';
 
 const ItemsList = () => {
   return (
-    <div>
+    <div className={style.items_list}>
       <p>Список товаров</p>
-      <div>Тут будет список товаров</div>
+      <div>
+        <Item />
+      </div>
     </div>
   );
 };

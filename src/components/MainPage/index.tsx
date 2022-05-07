@@ -16,11 +16,11 @@ const MainPage = () => {
   // =============================================
 
   return (
-    <>
+    <div className={style.page_wrapper}>
       <Header />
       <ItemsList />
       <Footer />;
-    </>
+    </div>
   );
 };
 
