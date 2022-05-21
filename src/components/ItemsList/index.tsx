@@ -4,7 +4,6 @@ import style from './ItemsList.module.scss';
 
 const ItemsList = () => {
   const [chartItemsAmount, setChartItemsAmount] = useState(0);
-
   const [name, setName] = useState('');
 
   const handleAddItemToChart = () => {
