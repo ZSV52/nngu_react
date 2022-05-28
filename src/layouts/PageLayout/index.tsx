@@ -10,9 +10,11 @@ interface IPageLayout {
 const PageLayout: FC<IPageLayout> = ({ children }) => {
   return (
     <div className={style.page_wrapper}>
-      <Header />
-      <div className={style.content_wrapper}>{children}</div>
-      <Footer />
+      <div className={style.section_wrapper}>
+        <Header />
+        <div className={style.content_wrapper}>{children}</div>
+        <Footer />
+      </div>
     </div>
   );
 };
