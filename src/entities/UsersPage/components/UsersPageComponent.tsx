@@ -6,7 +6,7 @@ import style from '../UsersPage.module.scss';
 import UserCard from './UserCard';
 
 interface IProps {
-  usersDataAttr: IUsers[];
+  usersDataAttr: IUsers[] | TNewUser[];
 }
 
 const UsersPageComponent: FC<IProps> = ({ usersDataAttr }) => {
@@ -37,6 +37,11 @@ const UsersPageComponent: FC<IProps> = ({ usersDataAttr }) => {
         )}
       </div>
       <Pagination limit={3} itemsAmount={usersDataAttr.length} />
+
+      <form onSubmit={() => console.log('hello')}>
+        <input type="text" placeholder="Введите имя" />
+        <input type="email" placeholder="Введите Email" />
+      </form>
     </div>
   );
 };
