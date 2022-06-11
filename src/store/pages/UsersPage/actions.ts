@@ -1,5 +1,5 @@
 import { IUsers } from '../../../interfaces/IUsers';
-import { ICreateUserAction, ISetUsersDataAction, } from './interfaces';
+import { ISetUsersDataAction, ICreateUserAction } from './interfaces';
 
 export const SET_USERS_DATA = 'SET_USERS_DATA';
 
@@ -9,6 +9,6 @@ export const setUsersDataAction = (payload: IUsers[]): ISetUsersDataAction => {
 
 export const CREATE_USER = 'CREATE_USER';
 
-export const createUserAction = (payload: IUsers ): ICreateUserAction => {
+export const createUserAction = (payload: IUsers): ICreateUserAction => {
   return { type: CREATE_USER, payload };
 };

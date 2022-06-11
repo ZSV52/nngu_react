@@ -9,9 +9,11 @@ export interface IUsersState {
 interface IBaseAction {
   type: string;
 }
+
 export interface ISetUsersDataAction extends IBaseAction {
   payload: IUsers[];
 }
+
 export interface ICreateUserAction extends IBaseAction {
   payload: IUsers;
 }
