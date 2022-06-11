@@ -6,7 +6,14 @@ export interface IUsersState {
   error: string | null;
 }
 
-export interface IUsersDataAction {
+interface IBaseAction {
   type: string;
+}
+export interface ISetUsersDataAction extends IBaseAction {
   payload: IUsers[];
 }
+export interface ICreateUserAction extends IBaseAction {
+  payload: IUsers;
+}
+
+export type UsersReducerAction = ISetUsersDataAction | ICreateUserAction;

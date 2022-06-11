@@ -1,5 +1,6 @@
-import { SET_USERS_DATA } from './actions';
-import { IUsersDataAction, IUsersState } from './interfaces';
+import { IUsers } from '../../../interfaces/IUsers';
+import { CREATE_USER, SET_USERS_DATA } from './actions';
+import { IUsersState, UsersReducerAction } from './interfaces';
 
 const initialState = {
   usersData: [],
@@ -9,11 +10,13 @@ const initialState = {
 
 export const UsersReducer = (
   state: IUsersState = initialState,
-  action: IUsersDataAction
+  action: UsersReducerAction
 ): IUsersState => {
   switch (action.type) {
+    case CREATE_USER:
+      return { ...state, usersData: [...state.usersData, action.payload as IUsers] };
     case SET_USERS_DATA:
-      return { ...state, usersData: action.payload };
+      return { ...state, usersData: action.payload as IUsers[] };
     default:
       return state;
   }
