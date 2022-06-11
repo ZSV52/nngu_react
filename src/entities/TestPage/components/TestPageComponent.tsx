@@ -17,24 +17,23 @@ const TestPageComponent = () => {
   }, []);
 
   // componentDidUpdate
-  // useEffect(() => {
-  //   console.log('Компонент обновлён');
-  // });
+  //   useEffect(() => {
+  //     console.log('Компонент обновлен');
+  //   });
 
-  // useEffect(() => {
-  //   console.log('COUNTER обновлён');
-  // }, [counter]);
+  //   useEffect(() => {
+  //     console.log('COUNTER обновлен');
+  //   }, [counter]);
 
-  // useEffect(() => {
-  //   console.log('SOME_ARRAY обновлён');
-  // }, [someArray]);
+  //   useEffect(() => {
+  //     console.log('SOME_ARRAY обновлен');
+  //   }, [someArray]);
 
-  // useEffect(() => {
-  //   console.log('COUNTER ИЛИ SOME_ARRAY обновлён');
-  // }, [counter, someArray]);
+  //   useEffect(() => {
+  //     console.log('COUNTER ИЛИ SOME_ARRAY обновлен');
+  //   }, [counter, someArray]);
 
   // componentWillUnmount
-
   useEffect(() => {
     return () => {
       console.log('Компонент был удален');
