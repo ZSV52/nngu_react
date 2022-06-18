@@ -1,4 +1,3 @@
-import { stat } from 'fs';
 import { IFetchTodosActions, ITodosState, TodosActionTypes } from './interfaces';
 
 const initialState: ITodosState = {
