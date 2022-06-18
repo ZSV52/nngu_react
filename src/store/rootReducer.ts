@@ -8,7 +8,7 @@ const reducers = {
   todos: TodosReducer,
 };
 
-export const rootReducer = combineReducers(reducers);
+const rootReducer = combineReducers(reducers);
 
 export const store = configureStore({
   reducer: rootReducer,

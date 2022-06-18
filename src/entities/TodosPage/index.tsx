@@ -4,7 +4,6 @@ import { useAppDispatch } from '../../hooks/useAppDispatch';
 import { useAppSelector } from '../../hooks/useAppSelector';
 import Pagination from '../../shared/Pagination';
 import { fetchTodos } from '../../store/pages/TodosPage/async-actions';
-import { store } from '../../store/rootReducer';
 import TodosPageComponent from './components/TodosPageComponent';
 
 const TodosPage = () => {
@@ -13,9 +12,11 @@ const TodosPage = () => {
   const { search } = useLocation();
   const navigate = useNavigate();
 
+  const currentPageNumber = new URLSearchParams(search).get('page');
+
   useEffect(() => {
-    dispatch(fetchTodos());
-  }, []);
+    dispatch(fetchTodos({ _page: Number(currentPageNumber), _limit: ITEMS_LIMIT }));
+  }, [currentPageNumber]);
 
   useEffect(() => {
     if (!search) {
@@ -23,12 +24,16 @@ const TodosPage = () => {
     }
   }, [navigate, search]);
 
-  const { todosData, error, loading } = useAppSelector(store);
+  const { todosData, error, loading } = useAppSelector((store) => store.todos);
+
+  if (error) {
+    return <div>{error}</div>;
+  }
 
   return (
     <>
-      <TodosPageComponent />
-      <Pagination />
+      {loading ? <div>Загрузка...</div> : <TodosPageComponent todosData={todosData} />}
+      <Pagination pagesCount={10} itemsAmount={5} limit={ITEMS_LIMIT} />
     </>
   );
 };

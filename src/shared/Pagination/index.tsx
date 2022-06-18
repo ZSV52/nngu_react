@@ -7,7 +7,7 @@ interface IProps {
   pagesCount?: number;
 }
 
-const Pagination: FC<IProps> = ({ limit, itemsAmount }) => {
+const Pagination: FC<IProps> = ({ limit, itemsAmount, pagesCount }) => {
   const pagesAmount = pagesCount || Math.ceil(itemsAmount / limit);
   const pagesArray: number[] = [];
 

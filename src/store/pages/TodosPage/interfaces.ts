@@ -35,3 +35,8 @@ export type IFetchTodosActions =
   | IFetchTodosAction
   | IFetchTodosSuccessAction
   | IFetchTodosFailureAction;
+
+export interface IFetchTodosParams {
+  _page: number;
+  _limit: number;
+}
