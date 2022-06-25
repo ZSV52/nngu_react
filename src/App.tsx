@@ -3,6 +3,7 @@ import { Route, Routes } from 'react-router-dom';
 import './assets/scss/normalize.scss';
 import TestPage from './entities/TestPage';
 import TodosPage from './entities/TodosPage';
+import UseRef from './entities/UseRef';
 import UsersPage from './entities/UsersPage';
 import UserComponent from './entities/UsersPage/components/UserComponent';
 import PageLayout from './layouts/PageLayout';
@@ -16,6 +17,7 @@ const App = () => {
         <Route path="users_page/:id" element={<UserComponent />} />
         <Route path="test_page" element={<TestPage />} />
         <Route path="todos_page" element={<TodosPage />} />
+        <Route path="use_ref" element={<UseRef />} />
       </Routes>
     </PageLayout>
   );
