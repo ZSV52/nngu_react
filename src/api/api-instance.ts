@@ -6,6 +6,7 @@ export const $api = axios.create({
   timeout: 10000,
   baseURL: baseUrl,
   headers: {
+    'Content-Type': 'application/json',
     Authorization: '',
   },
 });
