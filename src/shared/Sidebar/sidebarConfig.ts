@@ -29,4 +29,9 @@ export const sidebarConfig = [
     name: 'Use Memo',
     path: '/use_memo',
   },
+  {
+    id: 7,
+    name: 'Use Context',
+    path: '/use_context',
+  },
 ];

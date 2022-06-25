@@ -4,6 +4,7 @@ import './assets/scss/normalize.scss';
 import TestPage from './entities/TestPage';
 import TodosPage from './entities/TodosPage';
 import UseCallback from './entities/UseCallback';
+import UseContext from './entities/UseContext';
 import UseMemo from './entities/UseMemo';
 import UseRef from './entities/UseRef';
 import UsersPage from './entities/UsersPage';
@@ -22,6 +23,7 @@ const App = () => {
         <Route path="use_ref" element={<UseRef />} />
         <Route path="use_callback" element={<UseCallback />} />
         <Route path="use_memo" element={<UseMemo />} />
+        <Route path="use_context" element={<UseContext />} />
       </Routes>
     </PageLayout>
   );
