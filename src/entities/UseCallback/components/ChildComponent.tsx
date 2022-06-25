@@ -5,7 +5,7 @@ interface IProps {
   increase: () => void;
 }
 const ChildComponent: FC<IProps> = ({ decrease, increase }) => {
-  console.log('child rendered');
+  console.log('child rerendered');
   return (
     <div>
       <button type="button" onClick={decrease}>

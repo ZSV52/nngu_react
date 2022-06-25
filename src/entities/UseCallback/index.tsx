@@ -1,4 +1,3 @@
-import { ChildProcess } from 'child_process';
 import React, { useCallback, useState } from 'react';
 import ChildComponent from './components/ChildComponent';
 

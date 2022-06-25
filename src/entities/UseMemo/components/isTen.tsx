@@ -1,11 +1,11 @@
 import React, { FC, memo, useMemo } from 'react';
-import { isImportEqualsDeclaration } from 'typescript';
 
 interface IProps {
   value: number;
 }
+
 const IsTen: FC<IProps> = ({ value }) => {
-  console.log('IsTen rendered');
+  console.log('IsTen rerendered');
 
   const loop = () => {
     let i = 0;

@@ -1,28 +1,13 @@
 import React, { createContext, useMemo } from 'react';
+import ChildOne from './compontents/ChildOne';
+import { myUsers, UsersContext } from './context';
 
 const UseContext = () => {
-    const myUsers = useMemo(
-        () => [
-        {
-            id: 1,
-            name: 'Vasya',
-        },
-        {
-            id: 2,
-            name: 'Petya',
-        },
-        {
-            id: 3,
-            name: 'Masha',
-        },
-    ],
-    []
-    );
-
-    const UsersContext = createContext(myUsers)
   return (
-
-  )
+    <UsersContext.Provider value={myUsers}>
+      <ChildOne />
+    </UsersContext.Provider>
+  );
 };
 
 export default UseContext;
